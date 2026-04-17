@@ -11,7 +11,7 @@
       it('should return whatever value is passed into it', function() {
         expect(_.define(1)).to.equal(1);
         expect(_.define(false)).to.be.false;
-        expect(_.define('string')).to.equal('string');
+        expect(_.define('number')).to.equal('number');
       });
     });
 
