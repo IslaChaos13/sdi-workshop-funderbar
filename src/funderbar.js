@@ -249,14 +249,23 @@ _.falsyOrTruthy = function(a){
     //Below you will be building a function that creates an object using bracket notation ([]). Within the function create and return an object.
 
     _.objectCreationBracket = (a,b,c) =>{
-      //Code Goes Below
+      let obj ={};
+      obj["firstName"] = a;
+      obj["lastName"] = b;
+      obj["zord"] = c;
+
+      return obj//Code Goes Below
 
     }
 
     //Below you will be building a function that creates an object using dot notation (.). Within the function create and return an object.
 
     _.objectCreationDot = (a,b,c) =>{
-      //Code Goes Below
+      let obj = {};
+      obj.firstName = a;
+      obj.lastName = b;
+      obj.zord = c;
+      return obj//Code Goes Below
 
     }
 
