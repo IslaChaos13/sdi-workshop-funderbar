@@ -202,15 +202,42 @@ _.falsyOrTruthy = function(a){
         if (typeof a[i] === 'string'){
           result += a[i];
         }}
-      return result }
+      return result}
+
+
 
     //In this function you will loop though the passed in array. Prior to that you need to check the second parameter to determine what you will be returning.
     //If the second parameter is 'string' return a sentence created using the strings in the array. If the second parameter is 'number' you will return the total of the number in the array.
     //You may notice you did this work already in previous functions but need to combine them in some way. Ideally, you should call the previous two functions in your implementation instead of copy/pasting the 'guts'.
-    _.ifElseFor = function(a,b){
-      //Code Goes Below
+ _.ifElseFor = function(a, b) {
 
+  if (b === 'number') { //check to see if b is 'number'
+    let sum = 0; // if b is a 'number; let sum be 0
+
+    for (let i = 0; i < a.length; i++) { // cycle through the length of the array
+      if (typeof a[i] === 'number') { //if b is a number
+        sum += a[i]; // add all
+      } else if (typeof a[i] === 'string') {
+        sum += 1; // if b is 'string' change the string to a '1' and add them together
+      }
     }
+
+    return sum; //return sum
+  }
+
+  if (b === 'string') { // check to see if b is a string
+    let result = ""; // if it is 'string' then "" will be a placeholder for result
+
+    for (let i = 0; i < a.length; i++) { // look through the array
+      if (typeof a[i] === 'string') { // if b is 'string'
+        result += a[i]; //add all strings together and doesn't include numbers
+      }
+    }
+
+    return result;
+  }
+
+};// the above code works because of order of precedence
 
     //PART III
     //-------------------------------------------------------------------------
