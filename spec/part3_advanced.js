@@ -138,8 +138,8 @@
         expect(rangers['red']['zord']).to.eql('Tyrannosaurus');
         expect(rangers['black']['firstName']).to.eql('Zack');
         //Use a combination of dot and bracket notation to pass each test
-        expect(rangers[green.lastName]).to.eql('Oliver');
-        expect(rangers[yellow.zord]).to.eql('Sabertooth Tiger');
+        expect(rangers.green.lastName).to.eql('Oliver');
+        expect(rangers.yellow.zord).to.eql('Sabertooth Tiger');
       });
     });
 
@@ -153,11 +153,11 @@
       zord : 'Tyrannosaurus'}
       it("Should return Object's value using given key", function(){
         expect(_.objectValue(green, 'zord')).to.eql('Dragon');
-        expect(_.objectValue(red, 'zord')).to.eql(FILL_ME_IN);
-        expect(_.objectValue(green, 'firstName')).to.eql(FILL_ME_IN);
-        expect(_.objectValue(red, 'firstName')).to.eql(FILL_ME_IN);
-        expect(_.objectValue(FILL_ME_IN)).to.eql('Lee');
-        expect(_.objectValue(FILL_ME_IN)).to.eql('Oliver');
+        expect(_.objectValue(red, 'zord')).to.eql('Tyrannosaurus');
+        expect(_.objectValue(green, 'firstName')).to.eql('Tommy');
+        expect(_.objectValue(red, 'firstName')).to.eql('Jason');
+        expect(_.objectValue(red, 'lastName')).to.eql('Lee');
+        expect(_.objectValue(green, 'lastName')).to.eql('Oliver');
       })
     });
 

@@ -270,7 +270,7 @@ _.falsyOrTruthy = function(a){
     }
 
     _.objectValue = (a,b) => {
-      //Code Goes Below
+      return a[b];//Code Goes Below
 
     }
 
@@ -282,7 +282,14 @@ _.falsyOrTruthy = function(a){
 
     //Loop through the given array and return the total sum of all the numbers in the array.
     _.forOf = (a) => {
-      //Code Goes Below
+      let sum = 0;
+
+      for (const item of a){
+        if (typeof item === 'number'){
+          sum +=item
+        }
+      }
+        return sum;//Code Goes Below
 
     }
 
@@ -290,6 +297,12 @@ _.falsyOrTruthy = function(a){
     //Note: to add values to an array use .push();
     //example array.push(value)
     _.forInKeys = (a) =>{
+      let key = [];
+
+      for (const i in a){
+        key.push(i);
+      }
+      return key
       //Code Goes Below
 
     }
@@ -297,7 +310,12 @@ _.falsyOrTruthy = function(a){
     //Loop through the given object and return an array of values from the object.
     //This is similar to the above function but needs a little digging to get the value.
     _.forInValues = (a) =>{
-      //Code Goes Below
+      let values = [];
 
+      for (const i in a){
+        values.push(a[i])
+      }
+      return values;
+      //Code Goes Below
     }
 }());
