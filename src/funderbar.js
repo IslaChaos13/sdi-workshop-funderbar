@@ -142,42 +142,67 @@ _.falsyOrTruthy = function(a){
   //Control Flow
   //Create a basic if statement to pass the tests.
   _.ifLogic = function(a, b){
-    //Code Goes Below
+    if ( a = b) {
+      return 'Great'}//Code Goes Below
 
   }
 
     //Create a basic if else statement to pass the tests.
     _.ifElseLogic = function(a, b){
-      //Code Goes Below
+      if (a === b) {
+        return 'Great'}
+        else {return 'Good'}//Code Goes Below
 
     }
 
     //Using a for loop, iterate through the array passed.
     //Return the array as a single string.
     _.forLoop = function(a){
-      //Code Goes Below
+      let result = "";
+
+      for (let i = 0; i < a.length; i++){
+        result += a[i];
+      }
+      return result;//Code Goes Below
 
     }
 
     //Using NESTED for loops, iterate through an array or arrays
     _.nestedForLoop = function(a){
-      //Code Goes Below
-
+      let result = 0;
+      for (let i = 0; i < a.length; i++){
+         for (let j = 0; j < a[i].length; j++){
+          result += a[i][j];
+      }
+    }
+        return result //Code Goes Below
     }
 
     //While looping through the array passed determine the data type of the element. If the element is a number add it to a variable. At the end return that variable.
     //If an index in the array is not a number add 1 to the above mentioned variable
     _.forIfElseNum = function(a){
-      //Code Goes Below
+      let result = 0;
 
-    }
+      for (let i = 0; i < a.length; i++){
+        if (typeof a[i] === "number"){
+          result += a[i];
+        }
+        else {
+          result += 1;}
+        }
+        return result
+      }//Code Goes Below
 
     //This function is similar to the above function. Only this time you will be building a sentence rather than a total number. Loop through the array and concatenate the strings in it to make a sentence.
     //If an index in the array is not a string add and empty string ("") to the local variable
     _.forIfElseStr = function(a){
-      //Code Goes Below
+      let result = "";
 
-    }
+      for (let i = 0; i < a.length; i++){
+        if (typeof a[i] === 'string'){
+          result += a[i];
+        }}
+      return result }
 
     //In this function you will loop though the passed in array. Prior to that you need to check the second parameter to determine what you will be returning.
     //If the second parameter is 'string' return a sentence created using the strings in the array. If the second parameter is 'number' you will return the total of the number in the array.
